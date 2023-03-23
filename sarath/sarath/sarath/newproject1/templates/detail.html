@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body%}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+          <img src="{{b.image.url}}" style="padding-top:3%;height:400px;width:300px;">
+        </div>
+        <div class="col-md-6">
+<h1 class="heading"style="color:#ffff;" >{{b.name}}</h1><br>
+<h3 style="color:#ffff;" >{{b.discription}} </h3><br>
+<h2 style="color:#ffff;">{{b.year}}</h2><br>
+           <a href="{% url 'update' b.id %}" class="btn btn-primary">update</a>
+            <a href="{% url 'delete' b.id %}"class="btn btn-primary">delete</a>
+        </div>
+
+</div>
+    </div>
+{% endblock %}

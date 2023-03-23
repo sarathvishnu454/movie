@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="container">
+  <div class="row" style="padding-top:3%;">
+{% for i in a %}
+    <div class="col-md-3">
+<div class="card" style="width: 16rem;margin-bottom:1.5rem;">
+  <img class="card-img-top" src="{{i.image.url}}" style="height:200px;width:auto;" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{% url 'detail' i.id %}" style="color:#000000;" >{{i.name}}</a></h5>
+  </div>
+</div>
+    </div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
